@@ -117,14 +117,6 @@ The app supports these routes:
 npm install
 ```
 
-### Environment variables
-Create a `.env.local` file in the project root with:
-```env
-VITE_KHANYISA_APP_ID=your_app_id
-VITE_KHANYISA_APP_BASE_URL=your_backend_url
-VITE_KHANYISA_FUNCTIONS_VERSION=latest
-```
-These values are used as default app configuration in `src/lib/app-params.js`.
 
 ### Run development server
 ```bash
