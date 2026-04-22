@@ -1,0 +1,150 @@
+/* stylelint-disable-all */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* stylelint-enable-all */
+
+@layer base {
+  :root {
+    --font-display: 'Cormorant Garamond', serif;
+    --font-body: 'DM Sans', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    /* Nude / Warm Luxury Palette */
+    --background: 36 25% 96%;
+    --foreground: 25 18% 18%;
+
+    --card: 35 30% 98%;
+    --card-foreground: 25 18% 18%;
+
+    --popover: 35 30% 98%;
+    --popover-foreground: 25 18% 18%;
+
+    /* Warm Terracotta / Dusty Rose Primary */
+    --primary: 18 35% 55%;
+    --primary-foreground: 35 30% 98%;
+
+    --secondary: 36 20% 90%;
+    --secondary-foreground: 25 18% 30%;
+
+    --muted: 36 18% 92%;
+    --muted-foreground: 25 12% 52%;
+
+    /* Warm Blush Accent */
+    --accent: 345 25% 68%;
+    --accent-foreground: 35 30% 98%;
+
+    --destructive: 0 55% 58%;
+    --destructive-foreground: 35 30% 98%;
+
+    --border: 35 18% 86%;
+    --input: 35 18% 86%;
+    --ring: 18 35% 55%;
+
+    /* Chart Colors — all warm/nude toned */
+    --chart-1: 18 35% 55%;
+    --chart-2: 32 38% 58%;
+    --chart-3: 345 25% 68%;
+    --chart-4: 26 22% 48%;
+    --chart-5: 355 30% 72%;
+
+    --radius: 0.875rem;
+
+    --sidebar-background: 35 28% 97%;
+    --sidebar-foreground: 25 18% 22%;
+    --sidebar-primary: 18 35% 55%;
+    --sidebar-primary-foreground: 35 30% 98%;
+    --sidebar-accent: 36 20% 90%;
+    --sidebar-accent-foreground: 25 18% 30%;
+    --sidebar-border: 35 15% 88%;
+    --sidebar-ring: 18 35% 55%;
+  }
+
+  .dark {
+    --background: 25 15% 10%;
+    --foreground: 36 22% 90%;
+
+    --card: 25 14% 14%;
+    --card-foreground: 36 22% 90%;
+
+    --popover: 25 14% 14%;
+    --popover-foreground: 36 22% 90%;
+
+    --primary: 18 38% 62%;
+    --primary-foreground: 25 15% 10%;
+
+    --secondary: 25 12% 20%;
+    --secondary-foreground: 36 22% 80%;
+
+    --muted: 25 12% 20%;
+    --muted-foreground: 36 12% 55%;
+
+    --accent: 345 22% 60%;
+    --accent-foreground: 25 15% 10%;
+
+    --destructive: 0 50% 50%;
+    --destructive-foreground: 35 30% 98%;
+
+    --border: 25 12% 22%;
+    --input: 25 12% 22%;
+    --ring: 18 38% 62%;
+
+    --chart-1: 18 38% 62%;
+    --chart-2: 32 40% 62%;
+    --chart-3: 345 28% 65%;
+    --chart-4: 26 28% 58%;
+    --chart-5: 355 28% 68%;
+
+    --sidebar-background: 25 14% 12%;
+    --sidebar-foreground: 36 22% 85%;
+    --sidebar-primary: 18 38% 62%;
+    --sidebar-primary-foreground: 25 15% 10%;
+    --sidebar-accent: 25 12% 20%;
+    --sidebar-accent-foreground: 36 22% 80%;
+    --sidebar-border: 25 12% 20%;
+    --sidebar-ring: 18 38% 62%;
+  }
+}
+
+@layer base {
+  /* stylelint-disable-next-line */
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    /* stylelint-disable-next-line */
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3 {
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
+  }
+}
+
+/* Grain texture overlay for luxury feel */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-size: 200px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted-foreground) / 0.25);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground) / 0.45);
+}
