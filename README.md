@@ -203,3 +203,16 @@ npm test
 This repo is ready for local development, visual testing, and iterative enhancements. Use the existing page and component folders to add new dashboards, entity types, or analytics widgets.
 
 ---
+<img width="1763" height="1246" alt="image" src="https://github.com/user-attachments/assets/4ec2cf04-592c-49f7-bf9f-378e67ae8e06" />
+
+---
+
+<img width="1763" height="1246" alt="image" src="https://github.com/user-attachments/assets/0ec8274e-a38d-4f5a-94bb-3e5081a9bbb0" />
+
+---
+
+<img width="1763" height="844" alt="image" src="https://github.com/user-attachments/assets/bfd15d75-25b0-45f9-8a9e-5e08f7d8f09d" />
+
+---
+
+<img width="1763" height="844" alt="image" src="https://github.com/user-attachments/assets/f8d30b68-74e5-4b3c-805d-bf0334aec5d6" />
